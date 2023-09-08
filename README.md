@@ -1,3 +1,3 @@
-# MG-Trans: Multi-scale Graph Transformer with Information Bottleneck for Whole Slide Image Classification
+# MG-Trans: Multi-scale Graph Transformer with Information Bottleneck for Whole Slide Image Classification (TMI 2023)
 
-We will release our code soon once the paper has been published.
+This paper has been accepted by TMI. The code will be published soon.
