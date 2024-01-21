@@ -1,0 +1,21 @@
+export CUDA_VISIBLE_DEVICES=0
+python main.py \
+--seed 0 \
+--drop_out \
+--early_stopping \
+--lr 1e-4 \
+--k_start 0 \
+--k 5 \
+--label_frac 1 \
+--bag_loss ce \
+--task task_BRIGHT_cls3 \
+--results_dir results/BRIGHT \
+--exp_code MG_Trans \
+--model_type MG_Trans \
+--mode transformer \
+--log_data \
+--data_root_dir DATA_ROOT_DIR/BRIGHT/resnet50_trunc \
+--data_folder_s bright_subtyping_5x \
+--data_folder_l bright_subtyping_10x \
+--split_dir BRIGHT/task_BRIGHT_cls3_100 \
+--img_size 2500 \
