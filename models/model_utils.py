@@ -594,8 +594,6 @@ def pt2graph(coords, features, threshold=5000, radius=9):
     a = np.repeat(range(num_patches), radius-1)
     b = np.fromiter(chain(*[model.query(coords[v_idx], topn=radius)[1:] for v_idx in range(num_patches)]), dtype=int)
     edge_latent = torch.Tensor(np.stack([a,b])).type(torch.LongTensor)
-
-    # 去掉超过某一个阈值的边
     start_point = edge_spatial[0, :]
     end_point = edge_spatial[1, :]
     start_coord = coords[start_point]
