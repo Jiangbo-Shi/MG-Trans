@@ -6,19 +6,19 @@ Multiple instance learning (MIL)-based methods have become the mainstream for pr
 
 # Pre-requisites
 
-Python (3.7.7), h5py (2.10.0), matplotlib (3.1.1), numpy (1.18.1), opencv-python (4.1.1), openslide-python (1.1.1), openslide (3.4.1), pandas (1.1.3), pillow (7.0.0), PyTorch (1.6.0), scikit-learn (0.22.1), scipy (1.4.1), tensorflow (1.13.1), tensorboardx (1.9), torchvision (0.7.0), captum (0.2.0), shap (0.35.0), torch_geometric (1.6.3)
+Python (3.7.7), h5py (2.10.0), matplotlib (3.1.1), numpy (1.18.1), opencv-python (4.1.1), openslide-python (1.1.1), openslide (3.4.1), pandas (1.1.3), pillow (7.0.0), PyTorch (1.6.0), scikit-learn (0.22.1), scipy (1.4.1), tensorflow (1.13.1), tensorboardx (1.9), torchvision (0.7.0), captum (0.2.0), shap (0.35.0), torch_geometric (1.6.3).
 
 # Dataset
 
-* The TCGA datasets can be downloaded at [TCGA-dataset](https://portal.gdc.cancer.gov/).
+* The TCGA datasets can be downloaded at [TCGA datasets](https://portal.gdc.cancer.gov/).
 * The BRIGHT dataset can be downloaded at [BRIGHT Challenge](https://research.ibm.com/haifa/Workshops/BRIGHT/).
 
 # Prepare dataset file
 
-After downloading the required dataset, please prepare a dataset file (*e.g.*, 'BRIGHT_subtyping_three.csv') like the following format and put it into the 'dataset_csv' folder:
+After downloading the required dataset, please prepare a dataset file (*e.g.*, 'BRIGHT_subtyping_three.csv') in the following format and put it into the 'dataset_csv' folder:
 
 * The headname is 'case_id, slide_id, label'.
-* For each line, take the 'BRIGHT' dataset as an example, the value is organized as 'patient_0, BRACS_1786, Non-cancerous'.
+* For each line, taking the 'BRIGHT' dataset as an example, the value is organized as 'patient_0, BRACS_1786, Non-cancerous'.
 
 # Data preprocessing
 
@@ -30,7 +30,7 @@ Run the following scripts, the patches will be cropped based on the sliding wind
 bash scripts/create_patches.sh 
 ```
 
---source: It's the path of the original WSI, you should define it on yourself.
+--source: It's the path of the original WSI; you should define it by yourself.
 
 ## Extract patch features
 
@@ -40,7 +40,7 @@ Run the following scripts, the patch features will be extracted based on the pre
 bash feature_extraction/patch_extraction.sh
 ```
 
---library_path: It's the save path of patch features, you should define it on yourself.
+--library_path: It's the save path of patch features; you should define it by yourself.
 
 # Split Datasets
 
@@ -78,4 +78,4 @@ If you find our work useful in your research, please consider citing our paper a
 
 # Acknowledgement
 
-We have great thanks to the project of [CLAM](https://github.com/mahmoodlab/CLAM), [Patch_GCN](https://github.com/mahmoodlab/Patch-GCN), and [Self-Supervised-ViT-path](https://github.com/Richarizardd/Self-Supervised-ViT-Path).
+We have great thanks to the projects of [CLAM](https://github.com/mahmoodlab/CLAM), [Patch_GCN](https://github.com/mahmoodlab/Patch-GCN), and [Self-Supervised-ViT-path](https://github.com/Richarizardd/Self-Supervised-ViT-Path).
