@@ -387,7 +387,7 @@ class MG_Trans_main(nn.Module):
         logits_low = self.head_low(all_tokens[:, 0])
         logits_high = self.head_high(all_tokens_l[:, 0])
         delta_logits = torch.norm(logits_high-logits_low, p=1, dim=0).unsqueeze(0)
-        loss_global = self.loss_ce(delta_logits, label)
+        loss_global = -self.loss_ce(delta_logits, label)
 
         # total loss
         loss = loss_ce + 1e-4 * loss_global
